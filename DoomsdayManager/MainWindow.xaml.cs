@@ -23,6 +23,7 @@ namespace DoomsdayManager
         public MainWindow()
         {
             InitializeComponent();
+            ///test
         }
     }
 }
