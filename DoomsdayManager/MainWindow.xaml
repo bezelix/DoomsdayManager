@@ -62,17 +62,15 @@
 
             </Grid>
             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,106,0,0" Grid.Column="2" Grid.ColumnSpan="2">
-                <Button x:Name="Menu_Button" Content="Planowanie zapasów" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Plan zadań" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,45,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Domownicy" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,90,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Magazyn" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,135,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Użytkownicy" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,180,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Statystyki" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,225,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
-                <Button Content="Ustawienia" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,270,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6"/>
+                <Button x:Name="Planning" Content="Planowanie zapasów" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Planning_Click"/>
+                <Button x:Name="Plan" Content="Plan zadań" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,45,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Plan_Click"/>
+                <Button x:Name="Residents" Content="Domownicy" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,90,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Residents_Click"/>
+                <Button x:Name="Magazine" Content="Magazyn" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,135,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Magazine_Click"/>
+                <Button x:Name="Statistics" Content="Statystyki" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,225,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Statistics_Click"/>
+                <Button x:Name="Settings" Content="Ustawienia" Background="#2f3133" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="40" Margin="0,270,0,0" FontFamily="Malgun Gothic Semilight" FontSize="16" BorderBrush="#FF2F3133" Foreground="#FFA6A6A6" Click="Settings_Click"/>
             </Grid>
             <Grid Background="#FF242425" Margin="324,106,10,10">
-
-
+                <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
             </Grid>
         </Grid>
     </Grid>

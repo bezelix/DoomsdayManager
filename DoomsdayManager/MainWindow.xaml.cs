@@ -23,7 +23,35 @@ namespace DoomsdayManager
         public MainWindow()
         {
             InitializeComponent();
-            ///test
+        }
+        private void Planning_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new Planning();
+        }
+
+        private void Plan_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Residents_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Magazine_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Statistics_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
