@@ -18,13 +18,14 @@ namespace DoomsdayManager
     /// <summary>
     /// Interaction logic for Statistics.xaml
     /// </summary>
-    public partial class Statistics : Page
+    public partial class Statistics : Page, iPage
     {
-        public string PageName = "Statistics";
+        public string PageName { get; set; }
         public Statistics()
         {
             InitializeComponent();
-            this.Title.Text = PageName;
+            this.PageName = "Statistics";
+            this.Title.Text = this.PageName;
         }
     }
 }
