@@ -7,8 +7,8 @@
         mc:Ignorable="d" Height="800" Width="1200" ResizeMode="NoResize" Visibility="Visible" WindowStyle="ThreeDBorderWindow" Icon="logomin.png">
     <Grid Background="#2f3133">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="323*"/>
+            <ColumnDefinition Width="871*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.ColumnSpan="2">
             <Grid Height="101" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1194">
