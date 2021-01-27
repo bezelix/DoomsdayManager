@@ -16,15 +16,18 @@ using System.Windows.Shapes;
 namespace DoomsdayManager
 {
     /// <summary>
-    /// Interaction logic for Planning.xaml
+    /// Interaction logic for Magazine.xaml
     /// </summary>
-    public partial class Planning : Page
+    /// 
+    
+    public partial class Magazine : Page
     {
-        public string PageName = "Planning";
-        public Planning()
+        public string PageName = "Magazine";
+        public Magazine()
         {
             InitializeComponent();
             this.Title.Text = PageName;
+
         }
     }
 }
