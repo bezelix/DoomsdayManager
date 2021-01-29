@@ -24,10 +24,8 @@ namespace DoomsdayManager
        
         public Settings()
         {
-
             InitializeComponent();
             this.PageName = "Settings";
-
             this.Title.Text = PageName;
         }
 
