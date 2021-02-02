@@ -50,7 +50,7 @@ namespace DoomsdayManager
 
             Output.DataContext = users;
             Output.DisplayMemberPath = "FullInfo";
-
+            
 
         }
     }
