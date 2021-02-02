@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using DoomsdayManager.Data;
+
 namespace DoomsdayManager
 {
     /// <summary>
@@ -22,11 +24,34 @@ namespace DoomsdayManager
     
     public partial class Magazine : Page
     {
+        public List<User> users = new List<User>();
         public string PageName = "Magazine";
         public Magazine()
         {
             InitializeComponent();
             this.Title.Text = PageName;
+
+            DataAccess db = new DataAccess();
+            users = db.GetUser("latka");
+            Output.DataContext = users;
+            Output.DisplayMemberPath = "FullInfo";
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SearchClick(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            users = db.GetUser("latka");
+
+            Output.DataContext = users;
+            Output.DisplayMemberPath = "FullInfo";
+
+
         }
     }
 }

@@ -10,6 +10,8 @@
 
     <Grid>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Magazine" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
+        <ListBox x:Name="Output" HorizontalAlignment="Left" Height="362" Margin="70,39,0,0" VerticalAlignment="Top" Width="492" SelectionChanged="ListBox_SelectionChanged" Background="#FF1F1F1F"/>
+        <Button x:Name="Search" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="638,206,0,0" Click="SearchClick"/>
 
     </Grid>
 </Page>
