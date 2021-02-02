@@ -27,7 +27,6 @@ namespace DoomsdayManager
         {
             InitializeComponent();
             this.Title.Text = PageName;
-
         }
     }
 }
