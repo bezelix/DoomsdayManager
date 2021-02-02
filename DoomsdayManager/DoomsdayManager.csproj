@@ -182,13 +182,7 @@
     <Resource Include="logomin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\DM_Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Content Include="Data\DM_Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DM_Database.mdf</DependentUpon>
-    </Content>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
