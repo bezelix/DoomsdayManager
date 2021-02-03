@@ -31,10 +31,8 @@ namespace DoomsdayManager
             InitializeComponent();
             this.Title.Text = PageName;
 
-            DataAccess db = new DataAccess();
-            users = db.GetUser("latka");
-            Output.DataContext = users;
-            Output.DisplayMemberPath = "FullInfo";
+            //Output.DataContext = users;
+            //Output.DisplayMemberPath = "FullInfo";
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -48,10 +46,18 @@ namespace DoomsdayManager
 
             users = db.GetUser("latka");
 
-            Output.DataContext = users;
-            Output.DisplayMemberPath = "FullInfo";
-            
+            //Output.DataContext = users;
+            //Output.DisplayMemberPath = "FullInfo";
 
+            Output.Text = users[0].FirstName;
+
+
+        }
+
+        private void InsertNewRecord(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.InsertNewUser(FirstNameIns.Text);
         }
     }
 }

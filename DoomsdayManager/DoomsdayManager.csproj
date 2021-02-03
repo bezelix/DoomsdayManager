@@ -74,9 +74,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Category.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="iPage.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Magazine.xaml.cs">
       <DependentUpon>Magazine.xaml</DependentUpon>
     </Compile>
@@ -89,6 +91,7 @@
     <Compile Include="Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Unit.cs" />
     <Compile Include="User.cs" />
     <Page Include="Magazine.xaml">
       <SubType>Designer</SubType>

@@ -10,8 +10,11 @@
 
     <Grid>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Magazine" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
-        <ListBox x:Name="Output" HorizontalAlignment="Left" Height="362" Margin="70,39,0,0" VerticalAlignment="Top" Width="492" SelectionChanged="ListBox_SelectionChanged" Background="#FF1F1F1F"/>
         <Button x:Name="Search" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="638,206,0,0" Click="SearchClick"/>
+        <TextBlock x:Name="Output" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="10,39,0,0" Height="47" Width="168"/>
+        <TextBox x:Name="FirstNameIns" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="136,277,0,0" Background="#FF252526"/>
+        <TextBlock x:Name="FirstNameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="First name" VerticalAlignment="Top" Margin="24,271,0,0" Foreground="#FFC3B1B1" FontSize="22"/>
+        <Button x:Name="InsertNew" Content="Insert New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="313,372,0,0" Click="InsertNewRecord"/>
 
     </Grid>
 </Page>
