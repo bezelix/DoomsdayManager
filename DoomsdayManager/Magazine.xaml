@@ -5,16 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DoomsdayManager"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="Magazine">
 
     <Grid>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Magazine" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
-        <Button x:Name="Search" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="638,206,0,0" Click="SearchClick"/>
-        <TextBlock x:Name="Output" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="10,39,0,0" Height="47" Width="168"/>
-        <TextBox x:Name="FirstNameIns" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="136,277,0,0" Background="#FF252526"/>
-        <TextBlock x:Name="FirstNameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="First name" VerticalAlignment="Top" Margin="24,271,0,0" Foreground="#FFC3B1B1" FontSize="22"/>
-        <Button x:Name="InsertNew" Content="Insert New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="313,372,0,0" Click="InsertNewRecord"/>
 
+        <Grid x:Name="MagazineGrid">
+            <Button x:Name="OpenWindowToAddNewItem" Content="Add New Product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="10,10,0,0" Height="29" Background="#FF272727" Foreground="White" BorderBrush="{x:Null}" Click="OpenWindowToAddNewItemClick"/>
+        </Grid>
+        <Frame x:Name="MagazineMainFrame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Width="800"/>
     </Grid>
 </Page>

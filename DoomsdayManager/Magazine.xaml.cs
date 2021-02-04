@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using DoomsdayManager.Data;
+using DoomsdayManager.Pages;
 
 namespace DoomsdayManager
 {
@@ -30,9 +31,6 @@ namespace DoomsdayManager
         {
             InitializeComponent();
             this.Title.Text = PageName;
-
-            //Output.DataContext = users;
-            //Output.DisplayMemberPath = "FullInfo";
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -49,15 +47,15 @@ namespace DoomsdayManager
             //Output.DataContext = users;
             //Output.DisplayMemberPath = "FullInfo";
 
-            Output.Text = users[0].FirstName;
+            //Output.Text = users[0].FirstName;
 
 
         }
-
-        private void InsertNewRecord(object sender, RoutedEventArgs e)
+        private void OpenWindowToAddNewItemClick(object sender, RoutedEventArgs e)
         {
-            DataAccess db = new DataAccess();
-            db.InsertNewUser(FirstNameIns.Text);
+            MagazineGrid.Visibility = Visibility.Hidden;
+            AddNewItem content = new AddNewItem();
+            MagazineMainFrame.Content = content;
         }
     }
 }

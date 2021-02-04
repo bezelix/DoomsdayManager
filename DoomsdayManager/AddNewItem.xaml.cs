@@ -12,20 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DoomsdayManager.Data;
 
-namespace DoomsdayManager
+namespace DoomsdayManager.Pages
 {
     /// <summary>
-    /// Interaction logic for Residents.xaml
+    /// Interaction logic for AddNewItem.xaml
     /// </summary>
-    public partial class Residents : Page
+    public partial class AddNewItem : Page
     {
-        public string PageName = "Residents";
-        public Residents()
+        public AddNewItem()
         {
-
             InitializeComponent();
-            this.Title.Text = PageName;
+        }
+
+        private void AddNewItem1_Click(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.InsertNewItem(NameInput.Text, QuantityInput.Text, WeightInput.Text, SizeInput.Text, KcalInput.Text, ProteinInput.Text, CarbsInput.Text, FatInput.Text);
         }
     }
 }

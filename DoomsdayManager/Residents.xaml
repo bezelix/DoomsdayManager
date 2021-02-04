@@ -10,6 +10,5 @@
 
     <Grid>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Residents" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
-
     </Grid>
 </Page>

@@ -1,0 +1,50 @@
+﻿<Page x:Class="DoomsdayManager.Pages.AddNewItem"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DoomsdayManager.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="AddNewItem">
+
+    <Grid>
+
+
+        <Button x:Name="AddNewItem1" Content="Add New Item" HorizontalAlignment="Left" Margin="640,501,0,0" VerticalAlignment="Top" Width="138" Height="29" Background="#FF272727" Foreground="White" BorderBrush="{x:Null}" Click="AddNewItem1_Click"/>
+        <TextBlock x:Name="NameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Product Name" VerticalAlignment="Top" Margin="20,10,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="311" Margin="209,13,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBlock x:Name="CategoryLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Margin="20,49,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBlock x:Name="CategoryLabel_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unit" VerticalAlignment="Top" Margin="20,89,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBlock x:Name="CategoryLabel_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Quantity" VerticalAlignment="Top" Margin="20,129,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBlock x:Name="CategoryLabel_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top" Margin="20,169,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBlock x:Name="CategoryLabel_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top" Margin="20,209,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBlock x:Name="CategoryLabel_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="22,329,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"><Run Text="Production"/><Run Text=" "/><Run Text="Date"/></TextBlock>
+        <TextBlock x:Name="CategoryLabel_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="228,329,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22" Text="ExpirationDate"/>
+        <ComboBox HorizontalAlignment="Left" Margin="209,55,0,0" VerticalAlignment="Top" Width="311" BorderBrush="#FF272727" Background="#FF272727" Foreground="#FFE2E2E2">
+            <Button Content="Liter"/>
+            <Button Content="Piece"/>
+            <Button Content="Kilogram"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="209,94,0,0" VerticalAlignment="Top" Width="311" BorderBrush="#FF272727" Background="#FF272727" Foreground="#FFE2E2E2">
+            <Button Content="Liter"/>
+            <Button Content="Piece"/>
+            <Button Content="Kilogram"/>
+        </ComboBox>
+        <TextBox x:Name="QuantityInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="311" Margin="209,134,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBox x:Name="WeightInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="311" Margin="209,173,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBox x:Name="SizeInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="311" Margin="209,214,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <Calendar x:Name="ProductionDate" HorizontalAlignment="Left" Margin="22,362,0,0" VerticalAlignment="Top" Width="188"/>
+        <Calendar x:Name="ExpirationDate" HorizontalAlignment="Left" Margin="228,362,0,0" VerticalAlignment="Top" Width="188"/>
+        <TextBlock x:Name="CategoryLabel_Copy6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kcal" VerticalAlignment="Top" Margin="20,249,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
+        <TextBox x:Name="KcalInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="311" Margin="209,254,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBlock x:Name="CategoryLabel_Copy7" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="528,8,-170,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"><Run Text="P"/><Run Text="rot"/><Run Text="."/><Run Text=" "/></TextBlock>
+        <TextBox x:Name="ProteinInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="195" Margin="595,10,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBlock x:Name="CategoryLabel_Copy8" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="528,50,-170,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"><Run Text="F"/><Run Text="at"/></TextBlock>
+        <TextBox x:Name="FatInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="195" Margin="595,52,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+        <TextBlock x:Name="CategoryLabel_Copy9" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="528,96,-170,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"><Run Text="C"/><Run Text="arbs"/></TextBlock>
+        <TextBox x:Name="CarbsInput" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="195" Margin="595,98,0,0" Background="#FF272727" Foreground="#FFB9B9B9" SelectionBrush="{x:Null}" BorderBrush="#FF2B2B2B" TextAlignment="Center" FontSize="18"/>
+
+
+    </Grid>
+</Page>

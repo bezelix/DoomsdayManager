@@ -79,6 +79,9 @@
     <Compile Include="Helper.cs" />
     <Compile Include="iPage.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="AddNewItem.xaml.cs">
+      <DependentUpon>AddNewItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Magazine.xaml.cs">
       <DependentUpon>Magazine.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
     </Compile>
     <Compile Include="Unit.cs" />
     <Compile Include="User.cs" />
+    <Page Include="AddNewItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Magazine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,10 +171,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DMlogo.png" />
+    <Resource Include="Images\DMlogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="account.png" />
+    <Resource Include="Images\account.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -182,16 +189,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="lang.png" />
+    <Resource Include="Images\lang.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="help.png" />
+    <Resource Include="Images\help.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logomin.png" />
+    <Resource Include="Images\logomin.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
