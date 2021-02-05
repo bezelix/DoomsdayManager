@@ -25,12 +25,21 @@ namespace DoomsdayManager
     
     public partial class Magazine : Page
     {
-        public List<User> users = new List<User>();
+        public List<Item> mItems = new List<Item>();
         public string PageName = "Magazine";
         public Magazine()
         {
             InitializeComponent();
             this.Title.Text = PageName;
+
+            GetDataGridData();
+        }
+
+        private void GetDataGridData()
+        {
+            DataAccess db = new DataAccess();
+            mItems = db.GetItemList();
+            MagazineData.ItemsSource = mItems;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -42,7 +51,7 @@ namespace DoomsdayManager
         {
             DataAccess db = new DataAccess();
 
-            users = db.GetUser("latka");
+            //users = db.GetUser("latka");
 
             //Output.DataContext = users;
             //Output.DisplayMemberPath = "FullInfo";

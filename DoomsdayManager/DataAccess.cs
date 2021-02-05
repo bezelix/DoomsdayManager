@@ -18,6 +18,13 @@ namespace DoomsdayManager.Data
                 return connection.Query<User>("GetUserByLastName @LastName", new { LastName = lastName }).ToList();
             }
         }
+        public List<Item>GetItemList()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConString("DMDatabase")))
+            {
+                return connection.Query<Item>("GetItemList").ToList();
+            }
+        }
         public void InsertNewItem(string itemName, string quantity, string weightKG, string size, string kcal, string proteins, string carbons, string fats)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.ConString("DMDatabase")))

@@ -51,6 +51,7 @@ namespace DoomsdayManager
             Magazine content = new Magazine();
             MainFrame.Content = content;
             this.ActivePageName = content.PageName;
+            
         }
 
         private void Statistics_Click(object sender, RoutedEventArgs e)
