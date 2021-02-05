@@ -26,11 +26,18 @@
                             <Setter Property="FontSize" Value="15px"/>
                         </Style>
                     </DataGrid.Resources>
-                    
+
                     <DataGrid.Columns>
-                        
                         <DataGridTextColumn Header="Item Name"  Binding="{Binding ItemName}"/>
                         <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
+                        <DataGridTextColumn Header="Weight" Binding="{Binding WeightKG}" />
+                        <DataGridTextColumn Header="Size" Binding="{Binding Size}" />
+                        <DataGridTextColumn Header="Prod.Date" Binding="{Binding Quantity}" />
+                        <DataGridTextColumn Header="Expir.Date" Binding="{Binding Quantity}" />
+                        <DataGridTextColumn Header="KCal" Binding="{Binding Kcal}" />
+                        <DataGridTextColumn Header="Protein" Binding="{Binding Proteins}" />
+                        <DataGridTextColumn Header="Fat" Binding="{Binding Fats}" />
+                        <DataGridTextColumn Header="Carbs" Binding="{Binding Carbs}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>

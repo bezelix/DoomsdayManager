@@ -4,13 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoomsdayManager"
-        mc:Ignorable="d" Height="800" Width="1200" ResizeMode="NoResize" Visibility="Visible" WindowStyle="ThreeDBorderWindow" Icon="Images/logomin.png">
+        mc:Ignorable="d" Height="800" Width="1200" Visibility="Visible" Icon="Images/logomin.png" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" WindowState="Maximized">
     <Grid Background="#2f3133">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="207*"/>
+            <RowDefinition Height="565*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="323*"/>
             <ColumnDefinition Width="871*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.ColumnSpan="2">
+        <Grid Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Grid Height="101" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1194">
                 <Grid>
                     <Canvas Margin="-55,-114,387,-117">
