@@ -50,21 +50,17 @@ namespace DoomsdayManager
         private void SearchClick(object sender, RoutedEventArgs e)
         {
             DataAccess db = new DataAccess();
-
-            //users = db.GetUser("latka");
-
-            //Output.DataContext = users;
-            //Output.DisplayMemberPath = "FullInfo";
-
-            //Output.Text = users[0].FirstName;
-
-
         }
         private void OpenWindowToAddNewItemClick(object sender, RoutedEventArgs e)
         {
             MagazineGrid.Visibility = Visibility.Hidden;
             AddNewItem content = new AddNewItem();
             MagazineMainFrame.Content = content;
+        }
+
+        private void MagazineMainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@
             <Button x:Name="OpenWindowToAddNewItem" Content="Add New Product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="10,10,0,0" Height="29" Background="#FF272727" Foreground="White" BorderBrush="{x:Null}" Click="OpenWindowToAddNewItemClick"/>
             <Grid Margin="10,44,10,0">
 
-                <DataGrid x:Name="MagazineData" AutoGenerateColumns="False" ClipboardCopyMode="None" Background="#FF272727" FontFamily="Malgun Gothic Semilight" HeadersVisibility="Column" CanUserDeleteRows="False" CanUserAddRows="False" BorderBrush="{x:Null}">
+                <DataGrid x:Name="MagazineData" AutoGenerateColumns="False" ClipboardCopyMode="None" Background="#FF272727" FontFamily="Malgun Gothic Semilight" HeadersVisibility="Column" CanUserDeleteRows="True" CanUserAddRows="False" BorderBrush="{x:Null}">
                     <DataGrid.Resources>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
                             <Setter Property="Background" Value="#FF3A3A3A" />
@@ -32,8 +32,8 @@
                         <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" />
                         <DataGridTextColumn Header="Weight" Binding="{Binding WeightKG}" />
                         <DataGridTextColumn Header="Size" Binding="{Binding Size}" />
-                        <DataGridTextColumn Header="Prod.Date" Binding="{Binding Quantity}" />
-                        <DataGridTextColumn Header="Expir.Date" Binding="{Binding Quantity}" />
+                        <DataGridTextColumn Header="Prod.Date" Binding="{Binding ProductionDate}" />
+                        <DataGridTextColumn Header="Expir.Date" Binding="{Binding ExpirationDate}" />
                         <DataGridTextColumn Header="KCal" Binding="{Binding Kcal}" />
                         <DataGridTextColumn Header="Protein" Binding="{Binding Proteins}" />
                         <DataGridTextColumn Header="Fat" Binding="{Binding Fats}" />
@@ -42,6 +42,6 @@
                 </DataGrid>
             </Grid>
         </Grid>
-        <Frame x:Name="MagazineMainFrame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Width="800"/>
+        <Frame x:Name="MagazineMainFrame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Width="800" Navigated="MagazineMainFrame_Navigated"/>
     </Grid>
 </Page>

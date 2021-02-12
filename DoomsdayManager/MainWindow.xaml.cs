@@ -46,12 +46,11 @@ namespace DoomsdayManager
             this.ActivePageName = content.PageName;
         }
 
-        private void Magazine_Click(object sender, RoutedEventArgs e)
+        public void Magazine_Click(object sender, RoutedEventArgs e)
         {
             Magazine content = new Magazine();
             MainFrame.Content = content;
             this.ActivePageName = content.PageName;
-            
         }
 
         private void Statistics_Click(object sender, RoutedEventArgs e)

@@ -7,9 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="550" d:DesignWidth="800"
       Title="AddNewItem">
-
+    
     <Grid>
-
+        
 
         <Button x:Name="AddNewItem1" Content="Add New Item" HorizontalAlignment="Left" Margin="640,501,0,0" VerticalAlignment="Top" Width="138" Height="29" Background="#FF272727" Foreground="White" BorderBrush="{x:Null}" Click="AddNewItem1_Click"/>
         <TextBlock x:Name="NameLabel" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Product Name" VerticalAlignment="Top" Margin="20,10,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
@@ -21,11 +21,7 @@
         <TextBlock x:Name="CategoryLabel_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top" Margin="20,209,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"/>
         <TextBlock x:Name="CategoryLabel_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="22,329,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22"><Run Text="Production"/><Run Text=" "/><Run Text="Date"/></TextBlock>
         <TextBlock x:Name="CategoryLabel_Copy5" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="228,329,0,0" Height="40" Width="442" Foreground="#FF8D8D8D" FontSize="22" Text="ExpirationDate"/>
-        <ComboBox HorizontalAlignment="Left" Margin="209,55,0,0" VerticalAlignment="Top" Width="311" BorderBrush="#FF272727" Background="#FF272727" Foreground="#FFE2E2E2">
-            <Button Content="Liter"/>
-            <Button Content="Piece"/>
-            <Button Content="Kilogram"/>
-        </ComboBox>
+        <ComboBox SelectedValue="{Binding UnitType, Mode=TwoWay}" ItemsSource="{Binding UnitTypes}" HorizontalAlignment="Left" Margin="209,55,0,0" VerticalAlignment="Top" Width="311" BorderBrush="#FF272727" Background="#FF272727" Foreground="Black"/>
         <ComboBox HorizontalAlignment="Left" Margin="209,94,0,0" VerticalAlignment="Top" Width="311" BorderBrush="#FF272727" Background="#FF272727" Foreground="#FFE2E2E2">
             <Button Content="Liter"/>
             <Button Content="Piece"/>

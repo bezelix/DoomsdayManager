@@ -29,7 +29,25 @@ namespace DoomsdayManager.Pages
         private void AddNewItem1_Click(object sender, RoutedEventArgs e)
         {
             DataAccess db = new DataAccess();
-            db.InsertNewItem(NameInput.Text, QuantityInput.Text, WeightInput.Text, SizeInput.Text, KcalInput.Text, ProteinInput.Text, CarbsInput.Text, FatInput.Text);
+            db.InsertNewItem(NameInput.Text, QuantityInput.Text, WeightInput.Text, ProductionDate.SelectedDate.ToString(), ExpirationDate.SelectedDate.ToString(), SizeInput.Text, KcalInput.Text, ProteinInput.Text, CarbsInput.Text, FatInput.Text);
+
+            ////MainWindow mainFrame = new MainWindow();
+            ////Magazine magazineContent = new Magazine();
+            //mainFrame.Magazine_Click(sender, e);
+
+        }
+        public IList<Unit> UnitTypes
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Unit)).Cast<Unit>().ToList<Unit>();
+            }
+        }
+
+        public Unit UnitType
+        {
+            get;
+            set;
         }
     }
 }
