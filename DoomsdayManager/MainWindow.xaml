@@ -11,7 +11,7 @@
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="local:Status"/>
+                <!--<x:Type TypeName="local:Status"/>-->
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
