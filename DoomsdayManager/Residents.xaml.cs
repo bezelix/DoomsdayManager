@@ -20,12 +20,19 @@ namespace DoomsdayManager
     /// </summary>
     public partial class Residents : Page
     {
-        public string PageName = "Planning";
+        public string PageName = "Residents";
         public Residents()
         {
 
             InitializeComponent();
             this.Title.Text = PageName;
+        }
+
+        private void OpenWindowToAddNewResidentClick(object sender, RoutedEventArgs e)
+        {
+            ResidentsGrid.Visibility = Visibility.Hidden;
+            AddNewResident content = new AddNewResident();
+            ResidentsMainFrame.Content = content;
         }
     }
 }
