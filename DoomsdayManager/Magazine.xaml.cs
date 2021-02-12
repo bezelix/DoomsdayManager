@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using DoomsdayManager.Data;
+using DoomsdayManager.Pages;
+
 namespace DoomsdayManager
 {
     /// <summary>
@@ -22,11 +25,42 @@ namespace DoomsdayManager
     
     public partial class Magazine : Page
     {
+        public List<Item> mItems = new List<Item>();
         public string PageName = "Magazine";
         public Magazine()
         {
             InitializeComponent();
             this.Title.Text = PageName;
+
+            GetDataGridData();
+        }
+
+        private void GetDataGridData()
+        {
+            DataAccess db = new DataAccess();
+            mItems = db.GetItemList();
+            MagazineData.ItemsSource = mItems;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SearchClick(object sender, RoutedEventArgs e)
+        {
+            DataAccess db = new DataAccess();
+        }
+        private void OpenWindowToAddNewItemClick(object sender, RoutedEventArgs e)
+        {
+            MagazineGrid.Visibility = Visibility.Hidden;
+            AddNewItem content = new AddNewItem();
+            MagazineMainFrame.Content = content;
+        }
+
+        private void MagazineMainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }
