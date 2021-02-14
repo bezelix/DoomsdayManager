@@ -7,9 +7,36 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Residents">
-
     <Grid>
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Residents" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Magazine" VerticalAlignment="Top" Height="39" Width="790" Foreground="#FF4D4646" FontFamily="Malgun Gothic Semilight" FontSize="24" TextAlignment="Right"/>
 
+        <Grid x:Name="ResidentsGrid">
+            <Button x:Name="OpenWindowToAddNewItem" Content="Add New Resident" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Margin="10,10,0,0" Height="29" Background="#FF272727" Foreground="White" BorderBrush="{x:Null}" Click="OpenWindowToAddNewResidentClick"/>
+            <Grid Margin="10,44,10,0">
+
+                <DataGrid x:Name="MagazineData" AutoGenerateColumns="False" ClipboardCopyMode="None" Background="#FF272727" FontFamily="Malgun Gothic Semilight" HeadersVisibility="Column" CanUserDeleteRows="True" CanUserAddRows="False" BorderBrush="{x:Null}">
+                    <DataGrid.Resources>
+                        <Style TargetType="{x:Type DataGridColumnHeader}">
+                            <Setter Property="Background" Value="#FF3A3A3A" />
+                            <Setter Property="Height" Value="35px"/>
+                            <Setter Property="Padding" Value="5px"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontFamily" Value="Malgun Gothic Semilight"/>
+                            <Setter Property="FontSize" Value="15px"/>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="First Name"  Binding="{Binding ItemName}"/>
+                        <DataGridTextColumn Header="Last Name" Binding="{Binding Quantity}" />
+                        <DataGridTextColumn Header="Gender" Binding="{Binding WeightKG}" />
+                        <DataGridTextColumn Header="Age" Binding="{Binding Size}" />
+                        <DataGridTextColumn Header="Weight" Binding="{Binding ProductionDate}" />
+                        <DataGridTextColumn Header="Height" Binding="{Binding ExpirationDate}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+        <Frame x:Name="ResidentsMainFrame" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Width="800"/>
     </Grid>
 </Page>

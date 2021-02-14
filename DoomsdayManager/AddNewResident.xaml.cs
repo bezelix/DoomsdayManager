@@ -12,27 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DoomsdayManager.Data;
 
 namespace DoomsdayManager
 {
     /// <summary>
-    /// Interaction logic for Residents.xaml
+    /// Interaction logic for AddNewResident.xaml
     /// </summary>
-    public partial class Residents : Page
+    public partial class AddNewResident : Page
     {
-        public string PageName = "Residents";
-        public Residents()
+        public AddNewResident()
         {
-
             InitializeComponent();
-            this.Title.Text = PageName;
         }
 
-        private void OpenWindowToAddNewResidentClick(object sender, RoutedEventArgs e)
+        private void AddNewItem1_Click(object sender, RoutedEventArgs e)
         {
-            ResidentsGrid.Visibility = Visibility.Hidden;
-            AddNewResident content = new AddNewResident();
-            ResidentsMainFrame.Content = content;
+            DataAccess db = new DataAccess();
+            db.InsertNewResidents(NameInput.Text, LastNameInput.Text, GenderInput.Text, WeightInput.Text, HeightInput.Text, BirthDate.SelectedDate.ToString());
         }
     }
 }
